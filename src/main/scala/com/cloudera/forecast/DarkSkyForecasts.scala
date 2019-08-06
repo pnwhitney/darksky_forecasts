@@ -18,8 +18,6 @@ class DarkSkyForecasts {
     val darkSkyConnection: URLConnection = darkSky.openConnection
     val resultReader: BufferedReader = new BufferedReader(new InputStreamReader(darkSkyConnection.getInputStream))
 
-# comment
-
     var api_result: String = null
     var forecastRows = new scala.collection.mutable.LinkedList[Row]
     while ( { api_result = resultReader.readLine; api_result } != null) {
